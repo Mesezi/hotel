@@ -7,7 +7,7 @@ interface RoomDetailsProps {
     children?: string;
     room_size?: number;
     room_price?: number; // Added room_price property
-  }
+  
 
 const RoomCard = ({details}:{details:RoomDetailsProps}) => {
   return (
