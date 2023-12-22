@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import { Inter, Jost, Ibarra_Real_Nova,  Montserrat} from 'next/font/google'
+import { Jost , Montserrat} from 'next/font/google'
 
 const jost = Montserrat({ subsets: ['latin'] })
 

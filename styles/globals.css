@@ -39,6 +39,14 @@ body {
 width: 20rem;
 }
 
+.activities .images .swiper-slide{
+width: 35rem;
+}
+/* .activities .swiper-vertical{
+  background-color: rgb(255, 0, 0, .4);
+  height: 30rem;
+} */
+
 
 
 @media(min-width:640px) and (max-width:1023px){

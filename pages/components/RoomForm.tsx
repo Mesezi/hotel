@@ -35,11 +35,11 @@ const RoomForm = () => {
             id=""
             className="outline-none border-[1px] h-12 px-3 placeholder:text-zinc-100/40 border-white bg-white/0"
           >
-            <option selected className="text-black">
+            <option defaultValue='1' className="text-black">
               1
             </option>
-            {numbers.map((el: number) => (
-              <option className="text-black">{el}</option>
+            {numbers.map((el: number, index:number) => (
+              <option key={index} className="text-black">{el}</option>
             ))}
             <option value=""></option>
           </select>
@@ -53,8 +53,8 @@ const RoomForm = () => {
             className="outline-none border-[1px] h-12 px-3 placeholder:text-zinc-100/40 border-white bg-white/0"
           >
             <option className="text-black">1</option>
-            {numbers.map((el: number) => (
-              <option className="text-black">{el}</option>
+            {numbers.map((el: number, index:number) => (
+              <option key={index} className="text-black">{el}</option>
             ))}
             <option value=""></option>
           </select>

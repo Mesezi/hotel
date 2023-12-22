@@ -9,9 +9,6 @@ export default function Home() {
     <Layout>
       <Hero />
       <RoomDetails />
-      <div className="h-screen">
-        1
-      </div>
       </Layout>
   )
 }

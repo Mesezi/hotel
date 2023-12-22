@@ -78,8 +78,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         animate={controls}
         transition={{ duration: 0.2 }}
       >
-        {menuBgItems.map((item) => (
+        {menuBgItems.map((item, index) => (
           <img
+          key={index}
             className={`h-full w-full absolute ease duration-700 brightness-50 object-cover
                  ${
                    hoverMenuItem === item.title
@@ -102,8 +103,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             />
           </header>
           <ul className="flex w-full flex-col cursor-pointer my-5">
-            {menuBgItems.map((item) => (
+            {menuBgItems.map((item, index) => (
               <li
+                key={index}
                 onMouseEnter={() => setHoverMenuItem(item.title)}
                 onMouseLeave={() => setHoverMenuItem("")}
                 className="ibarra text-[3rem] md:text-[3.5rem] italic"
