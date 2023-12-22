@@ -1,16 +1,8 @@
 import React from "react";
 
-// interface RoomDetailsProps {
-// img_url: string
-// price: number
-// adults: string
-// children: string
-// room_size: number
-// }
-
 interface RoomDetailsProps {
     room_type?: string;
-    img_url?: string;
+    img_url: string;
     adults?: string;
     children?: string;
     room_size?: number;
