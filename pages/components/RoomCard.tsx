@@ -13,11 +13,11 @@ interface RoomDetailsProps {
 const RoomCard = ({details}:{details:RoomDetailsProps}) => {
   return (
     <div className="w-full">
-      <img
+      {/* <img
         className="w-full aspect-[4/3] md:aspect-[5/3]"
         src={details.img_url}
         alt=""
-      />
+      /> */}
       <article className="flex justify-between items-center gap-3 mt-3">
         <div className="space-y-1">
           <h4 className="text-4xl italic ibarra">{details.room_type}</h4>
