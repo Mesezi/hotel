@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion, useAnimation, useInView } from "framer-motion";
 
-const inViewHook = (ref) => {
+const inViewHook = (ref:any) => {
     const controls = useAnimation();
     const inView = useInView(ref, { once: false });
   
