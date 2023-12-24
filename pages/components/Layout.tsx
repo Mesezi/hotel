@@ -4,6 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
 import { MdClose } from "react-icons/md";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import Footer from "./Footer";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [menu, setMenu] = useState(false);
@@ -147,7 +148,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       </header>
 
       <main>{children}</main>
-      <footer></footer>
+      <Footer />
     </div>
   );
 };
