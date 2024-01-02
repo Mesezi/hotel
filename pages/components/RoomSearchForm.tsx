@@ -1,10 +1,9 @@
 import React from "react";
 import Container from "./Container";
 
-const RoomForm = () => {
+const RoomSearchForm = () => {
   const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
-    <Container>
       <form className="flex flex-col md:grid md:grid-cols-[1fr,1fr,2fr,1fr] w-full gap-5">
         <div className="flex flex-col gap-2">
           <label htmlFor="">Check-in*</label>
@@ -69,8 +68,7 @@ const RoomForm = () => {
           SEARCH
         </button>
       </form>
-    </Container>
   );
 };
 
-export default RoomForm;
+export default RoomSearchForm;

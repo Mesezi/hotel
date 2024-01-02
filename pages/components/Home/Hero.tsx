@@ -1,7 +1,8 @@
 'use client'
 import React from "react";
 import Reveal from "../Reveal";
-import RoomForm from "../RoomForm";
+import RoomSearchForm from "../RoomSearchForm";
+import Container from "../Container";
 
 const Hero = () => {
   return (
@@ -29,7 +30,10 @@ const Hero = () => {
         </div>
        
         <div className="hidden md:block">
-        <RoomForm />
+          <Container>
+          <RoomSearchForm />
+          </Container>
+     
         </div>
       
       </article>

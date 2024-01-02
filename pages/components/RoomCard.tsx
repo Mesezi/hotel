@@ -1,4 +1,5 @@
 'use client'
+import Link from "next/link";
 import React from "react";
 
 interface RoomDetailsProps {
@@ -21,7 +22,7 @@ const defaultDetails = {
 
 const RoomCard = ({details = defaultDetails}:{details:RoomDetailsProps}) => {
   return (
-    <div className="w-full">
+    <Link href={`/accomodation/${details.room_type.toLowerCase().replace(/\s+/g, '-')}`} className="w-full block">
       <img
         className="w-full aspect-[4/3] md:aspect-[5/3]"
         src={details.img_url}
@@ -40,7 +41,7 @@ const RoomCard = ({details = defaultDetails}:{details:RoomDetailsProps}) => {
           <h4 className="text-4xl ibarra">&#x20A6;{details.room_price}</h4>
         </div>
       </article>
-    </div>
+    </Link>
   );
 };
 

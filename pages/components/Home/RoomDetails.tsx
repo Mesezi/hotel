@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import Reveal from "../Reveal";
 import Container from "../Container";
-import RoomForm from "../RoomForm";
+import RoomSearchForm from "../RoomSearchForm";
 import RoomCard from "../RoomCard";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import { rooms } from "@/utils/allRooms";
 import { motion, useAnimation, useInView } from "framer-motion";
 import ActivitiesSlider from "./ActivitiesSlider";
+import HoverCards from "../HoverCards";
 
 const RoomDetails = () => {
   const sliderRef = useRef(null);
@@ -25,61 +26,12 @@ const RoomDetails = () => {
     }
   }, [inView]);
 
-  const HoverCards = ({
-    image1,
-    image2,
-    title,
-  }: {
-    image1: string;
-    image2: string;
-    title: string;
-  }) => {
-    return (
-      <div className="group relative h-[30rem] md:h-[35rem] overflow-hidden">
-        <img
-          className="group-hover:opacity-0 opacity-1 absolute h-full w-full object-cover z-10 duration-300 ease-in-out"
-          src={image2}
-          alt=""
-        />
-        <img
-          className="absolute h-full w-full object-cover"
-          src={image1}
-          alt=""
-        />
-
-        <div className="flex justify-center items-center h-full w-ful bg-black/30 relative z-10 p-3">
-          <article className="md:w-[60%] overflow-hidden">
-            <h3 className="text-[3.5rem] ibarra italic">{title}</h3>
-            <p
-              className="mt-28 mb-5 md:translate-x-[100%] md:group-hover:translate-x-0 
-            group-hover:visible ease-in-out duration-300 delay-100 text-lg"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              ex magni accusantium asperiores eius blanditiis provident
-              distinctio. Itaque, quisquam architecto.
-            </p>
-            <button className="overflow-hidden">
-              <span
-                className="font-bold tracking-widest inline-block
-              md:translate-x-[100%] group-hover:translate-x-0 
-              group-hover:visible ease-in-out duration-300 
-              "
-              >
-                LEARN MORE
-              </span>
-            </button>
-          </article>
-        </div>
-      </div>
-    );
-  };
-
   return (
     <div className="my-16">
       <Container>
         <Reveal from="top">
           <div className="md:hidden mb-16">
-            <RoomForm />
+              <RoomSearchForm />
           </div>
         </Reveal>
         <div className="max-w-[900px] text-center md:text-left">
@@ -142,7 +94,7 @@ const RoomDetails = () => {
               //   clickable: true,
               // }}
               // modules={[Pagination]}
-              className="mySwiper room-card cursor-grab"
+              className="mySwiper room-card"
             >
               {rooms.map((el: any, index: any) => {
                 if (index == 0) {
@@ -224,19 +176,7 @@ const RoomDetails = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        <HoverCards
-          image1="https://images.pexels.com/photos/2373201/pexels-photo-2373201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          image2="https://images.pexels.com/photos/3865792/pexels-photo-3865792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          title="Relax Spa"
-        />
-
-        <HoverCards
-          image1="https://images.pexels.com/photos/3764568/pexels-photo-3764568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          image2="https://images.pexels.com/photos/5793891/pexels-photo-5793891.jpeg?auto=compress&cs=tinysrgb&w=600"
-          title="Wellness"
-        />
-      </div>
+     <HoverCards />
 
       <Container className="py-20">
         <div className="max-w-[900px] text-center md:text-left">

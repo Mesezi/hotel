@@ -67,7 +67,7 @@ const Footer = () => {
          <img
               src="/assets/eden hotel.png"
               alt="company logo"
-              className="h-20 object-cover eden-logo mx-auto"
+              className="h-20 object-cover eden-logo"
             />
         </div>
     </footer>
