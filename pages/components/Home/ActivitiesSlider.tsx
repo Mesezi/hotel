@@ -118,7 +118,8 @@ const ActivitiesSlider = () => {
   <div className='flex gap-3 md:ml-[10%] mt-14 justify-center md:justify-start'>
     {
       activities.map((el:any,index:number)=> <span className={`h-[3px] inline-block w-12 cursor-pointer
-      ${activeIndex === index ? 'bg-[#FFD9B6]' : 'bg-white/50'} ease-in-out duration-300`} onClick={()=>slideTo(index)}></span>)
+      ${activeIndex === index ? 'bg-[#FFD9B6]' : 'bg-white/50'} ease-in-out duration-300`} 
+      onClick={()=>slideTo(index)}></span>)
     }
   </div>
     </>
